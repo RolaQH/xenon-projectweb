@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sales", "Sales", "{40461469-11C2-4A63-96DE-9D6677DC7A73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{4382CB06-6713-43D3-8BDC-76FA28523418}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{5F676FC8-05BE-45CF-8495-2F227DE1F888}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xenon.Base.DataAccess", "Xenon.Base.DataAccess\Xenon.Base.DataAccess.csproj", "{4270F613-1B92-4DD9-9C01-6DEF7F6058CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{396703A3-53E5-4301-B949-07E0659AAAED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FronEnd", "FronEnd", "{6D54BE67-E773-428A-AE23-FEDFF1DEB284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xenon.Core.Data.Sales", "Xenon.Core.Data.Sales\Xenon.Core.Data.Sales.csproj", "{C92620C1-28BC-469B-8006-C45F353EB338}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xenon.Core.Entity.Sales", "Xenon.Core.Entity.Sales\Xenon.Core.Entity.Sales.csproj", "{078BFFF0-C725-4974-8178-79420953E3DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xenon.Core.Logic.Sales", "Xenon.Core.Logic.Sales\Xenon.Core.Logic.Sales.csproj", "{91F12CFF-37F4-43AB-A166-8AB90D16CE79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xenon.FronEnd.TestConsole.Sales", "Xenon.FronEnd.TestConsole.Sales\Xenon.FronEnd.TestConsole.Sales.csproj", "{B4080919-DF73-4CAC-83B8-CE25003865E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{92EFE33C-E01E-4BCD-85FC-3F277D1D5064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xenon.FronEnd.WebForm.Sales", "Xenon.FronEnd.WebForm.Sales\Xenon.FronEnd.WebForm.Sales.csproj", "{CB5F3AA6-88B1-492E-A93F-D6BA32C9D697}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FCD86E27-41C0-4E53-B240-B6224D2E48C6}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{0E2FF24B-F35F-49B4-B6EF-C595DC440AFB}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Xenon.DataBase", "Xenon.DataBase\Xenon.DataBase.sqlproj", "{75D22B74-333D-4511-BE91-F8170FA96E5D}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4270F613-1B92-4DD9-9C01-6DEF7F6058CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4270F613-1B92-4DD9-9C01-6DEF7F6058CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4270F613-1B92-4DD9-9C01-6DEF7F6058CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4270F613-1B92-4DD9-9C01-6DEF7F6058CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92620C1-28BC-469B-8006-C45F353EB338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92620C1-28BC-469B-8006-C45F353EB338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92620C1-28BC-469B-8006-C45F353EB338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92620C1-28BC-469B-8006-C45F353EB338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078BFFF0-C725-4974-8178-79420953E3DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078BFFF0-C725-4974-8178-79420953E3DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078BFFF0-C725-4974-8178-79420953E3DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078BFFF0-C725-4974-8178-79420953E3DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F12CFF-37F4-43AB-A166-8AB90D16CE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F12CFF-37F4-43AB-A166-8AB90D16CE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F12CFF-37F4-43AB-A166-8AB90D16CE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F12CFF-37F4-43AB-A166-8AB90D16CE79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4080919-DF73-4CAC-83B8-CE25003865E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4080919-DF73-4CAC-83B8-CE25003865E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4080919-DF73-4CAC-83B8-CE25003865E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4080919-DF73-4CAC-83B8-CE25003865E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB5F3AA6-88B1-492E-A93F-D6BA32C9D697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB5F3AA6-88B1-492E-A93F-D6BA32C9D697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB5F3AA6-88B1-492E-A93F-D6BA32C9D697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB5F3AA6-88B1-492E-A93F-D6BA32C9D697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D22B74-333D-4511-BE91-F8170FA96E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D22B74-333D-4511-BE91-F8170FA96E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D22B74-333D-4511-BE91-F8170FA96E5D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{75D22B74-333D-4511-BE91-F8170FA96E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D22B74-333D-4511-BE91-F8170FA96E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D22B74-333D-4511-BE91-F8170FA96E5D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F676FC8-05BE-45CF-8495-2F227DE1F888} = {4382CB06-6713-43D3-8BDC-76FA28523418}
+		{4270F613-1B92-4DD9-9C01-6DEF7F6058CB} = {5F676FC8-05BE-45CF-8495-2F227DE1F888}
+		{396703A3-53E5-4301-B949-07E0659AAAED} = {40461469-11C2-4A63-96DE-9D6677DC7A73}
+		{6D54BE67-E773-428A-AE23-FEDFF1DEB284} = {40461469-11C2-4A63-96DE-9D6677DC7A73}
+		{C92620C1-28BC-469B-8006-C45F353EB338} = {396703A3-53E5-4301-B949-07E0659AAAED}
+		{078BFFF0-C725-4974-8178-79420953E3DE} = {396703A3-53E5-4301-B949-07E0659AAAED}
+		{91F12CFF-37F4-43AB-A166-8AB90D16CE79} = {396703A3-53E5-4301-B949-07E0659AAAED}
+		{B4080919-DF73-4CAC-83B8-CE25003865E3} = {92EFE33C-E01E-4BCD-85FC-3F277D1D5064}
+		{92EFE33C-E01E-4BCD-85FC-3F277D1D5064} = {40461469-11C2-4A63-96DE-9D6677DC7A73}
+		{CB5F3AA6-88B1-492E-A93F-D6BA32C9D697} = {6D54BE67-E773-428A-AE23-FEDFF1DEB284}
+		{75D22B74-333D-4511-BE91-F8170FA96E5D} = {0E2FF24B-F35F-49B4-B6EF-C595DC440AFB}
+	EndGlobalSection
+EndGlobal
