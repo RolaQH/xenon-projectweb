@@ -118,11 +118,11 @@
         
         if (K_OPERACION_ACTUAL == K_OPERACION_NUEVO) {
             
-            DatosAjax('POST', 'Mantenimientos/frmTable.aspx/InsertarCallBack', args, Agregar);
+            DatosAjax('POST', 'Paginas/Mantenimientos/frmTable.aspx/InsertarCallBack', args, Agregar);
 
         }
         else if (K_OPERACION_ACTUAL == K_OPERACION_ACTUALIZAR) {
-            DatosAjax('POST', 'Mantenimientos/frmTable.aspx/ModificarCallBack', args, Modificar);
+            DatosAjax('POST', 'Paginas/Mantenimientos/frmTable.aspx/ModificarCallBack', args, Modificar);
         }
         $('#myModal').modal('hide');
     }
