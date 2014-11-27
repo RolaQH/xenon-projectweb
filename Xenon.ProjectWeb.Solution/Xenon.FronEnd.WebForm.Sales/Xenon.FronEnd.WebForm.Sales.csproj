@@ -41,10 +41,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EasyCallback">
-      <HintPath>C:\Users\Rola\Desktop\Xenon.ERP.Solution\Xenon.Base.DataAccess\Lib\EasyCallback.dll</HintPath>
+      <HintPath>..\Xenon.Base.DataAccess\Lib\EasyCallback.dll</HintPath>
     </Reference>
     <Reference Include="Json">
-      <HintPath>C:\Users\Rola\Desktop\Xenon.ERP.Solution\Xenon.Base.DataAccess\Lib\Json.dll</HintPath>
+      <HintPath>..\Xenon.Base.DataAccess\Lib\Json.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -353,6 +353,7 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
+    <Content Include="InicioSession\Login.aspx" />
     <Content Include="Paginas\Mantenimientos\frmSintomas.aspx" />
     <Content Include="Paginas\Mantenimientos\frmSintomas.js" />
     <Content Include="Paginas\Mantenimientos\frmTable.aspx" />
@@ -1019,6 +1020,12 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioSession\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioSession\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Mantenimientos\frmSintomas.aspx.cs">
       <DependentUpon>frmSintomas.aspx</DependentUpon>

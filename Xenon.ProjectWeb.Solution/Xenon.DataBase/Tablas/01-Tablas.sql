@@ -11,6 +11,71 @@ USE BDBoticService
 GO
 
 
+CREATE TABLE EstadoCivil(
+	[IdEstadoCivil] [INT] IDENTITY(1,1) NOT NULL,
+	[Descripcion] [VARCHAR](50),
+	CONSTRAINT [PK_EstadoCivil] PRIMARY KEY CLUSTERED ([IdEstadoCivil] ASC)
+)
+Go
+
+CREATE TABLE Rol(
+	[IdRol]	[CHAR](3) NOT NULL,
+	[Descripcion] [VARCHAR](50),
+	[Estado] [BIT],
+	CONSTRAINT [PK_Rol] PRIMARY KEY CLUSTERED ([IdRol] ASC)
+)
+GO
+
+CREATE Table Menu(
+	[IdMenu] [INT] IDENTITY(1,1) NOT NULL,
+	[NombreMenu] [varchar](50) null,
+	[PadreId][int] NULL,
+	[Icono] [VARCHAR](100) NULL,
+	[Mensaje] [VARCHAR](100) NULL,
+	[Url] [varchar](100),
+	CONSTRAINT [IdMenu] PRIMARY KEY CLUSTERED ([IdMenu] ASC)
+)
+Go
+
+
+
+CREATE TABLE Rol_Menu(
+	[IdMenu] [INT] ,
+	[IdRol]	[CHAR](3) ,
+	CONSTRAINT [FK_RM_Menu] FOREIGN KEY ([IdMenu]) REFERENCES [dbo].[Menu] ([IdMenu]),
+	CONSTRAINT [FK_RM_Rol] FOREIGN KEY ([IdRol]) REFERENCES [dbo].[Rol] ([IdRol]),
+)
+Go
+
+Create Table Usuario(
+	[IdUsuario] [CHAR](4) NOT NULL,
+	[ApellidoPaterno] [VARCHAR](30) not null,
+	[ApellidoMaterno] [VARCHAR](30) not null,
+	[Nombres] [VARCHAR](30) not null,
+	[Direccion] [VARCHAR](50) NULL,
+	[IdSexo] [INT] NULL,
+	[Ubigeo] [VARCHAR](MAX) NULL,
+	[DNI] [CHAR](8) UNIQUE NULL,
+	[Estudio] [VARCHAR](30) NULL,
+	[IdEstadoCivil] [INT],
+	[Celular] [VARCHAR](20),
+	[Telefono] [VARCHAR](20),
+	[FechaNacimiento] [DATE],
+	[FechaIngreso] [DATETIME],
+	[Foto] [VARCHAR](255),
+	[CambioConDespues] [bit],
+	[CambioContraseña] [BIT],
+	[Usuario] [VARCHAR](50),
+	[Contrasena] VarBinary(8000),
+	[IdRol] [CHAR](3) NULL,
+	CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED ([IdUsuario] ASC),
+    CONSTRAINT [FK_Usuario_EstadoCivil] FOREIGN KEY ([IdEstadoCivil]) REFERENCES [dbo].[EstadoCivil] ([IdEstadoCivil]),
+	CONSTRAINT [FK_Usuario_Rol] FOREIGN KEY ([IdRol]) REFERENCES [dbo].[Rol] ([IdRol])
+)
+Go
+
+
+
 CREATE TABLE [dbo].[TipoUBigeo](
 	[IdTipo] [INT] IDENTITY(1,1) NOT NULL,
 	[Descripcion] [VARCHAR](30) NULL,
