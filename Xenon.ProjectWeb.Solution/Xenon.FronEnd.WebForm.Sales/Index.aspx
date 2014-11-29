@@ -24,46 +24,23 @@
     <link href="ScriptsDev/plugins/select2/select2.css" rel="stylesheet"/>
     <link href="ScriptsDev/css/style.css" rel="stylesheet"/>
     <link href="ScriptsDev/css/style-responsive.css" rel="stylesheet" />
+    <script src="Index.js"></script>
     <!-- <link href="ScriptsDev/css/stylexx.css" rel="stylesheet" />-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
             <script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
             <script src="http://getbootstrap.com/docs-assets/js/respond.min.js"></script>
     <![endif]-->
-    
-    <!-- JqGrid-->
-   <%-- <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
-		<link rel="stylesheet" href="assets/css/ui.jqgrid.css" />--%>
 
-		<!-- ace styles -->
-		<!--<link rel="stylesheet" href="assets/css/ace.min.css" id="main-ace-style" />-->
-    <!-- Fotable and DataTable -->
-   <%-- <link href="Content/foundation/normalize.css" type="text/css" rel="Stylesheet" />
-    <link href="Content/foundation/foundation.mvc.css" type="text/css" rel="Stylesheet" />
-    <link href="Content/foundation/foundation.css" type="text/css" rel="Stylesheet" />--%>
-    <%--<link href="Content/DataTables-1.9.4/foundation/dataTables.foundation.css" type="text/css" rel="Stylesheet" />
-    <link rel="stylesheet" href="Content/foundation/foundation_icons_general/stylesheets/general_foundicons.css"/>
-    <script type="text/javascript" src="Scripts/DataTables-1.9.4/media/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript"  src="Scripts/foundation/foundation.js"></script>
-    <script type="text/javascript"  src="Content/DataTables-1.9.4/foundation/dataTables.foundation.js"></script>--%>
-
-
-
-    <!-- Footable-2 -->
-    <%--<link href="Scripts/FooTable-2/css/footable.core.css?v=2-0-1" rel="stylesheet" type="text/css"/>
-    <link href="Scripts/FooTable-2/demos/css/footable-demos.css" rel="stylesheet" type="text/css"/>
-    <script src="js/bootstrap-tab.js" type="text/javascript"></script>
-    <script src="Scripts/FooTable-2/demos/js/demos.js" type="text/javascript"></script>
-    <script src="Scripts/FooTable-2/js/footable.js?v=2-0-1" type="text/javascript"></script>
-    <script src="Scripts/FooTable-2/js/footable.grid.js" type="text/javascript"></script>
-    <script src="Scripts/FooTable-2/js/footable.sort.js" type="text/javascript"></script>
-    <script src="Scripts/FooTable-2/js/footable.paginate.js" type="text/javascript"></script>--%>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+
+            </Scripts>
+        </asp:ScriptManager>
     </form>
 
     <!--Start Header-->
@@ -129,12 +106,12 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle account" data-toggle="dropdown">
                                         <div class="avatar">
-                                            <img src="ScriptsDev/img/rola.jpg" class="img-rounded" alt="avatar" />
+                                            <img src="" id="imgUser" class="img-rounded" alt="avatar" />
                                         </div>
                                         <i class="fa fa-angle-down pull-right"></i>
                                         <div class="user-mini pull-right">
                                             <span class="welcome">Bienvenido,</span>
-                                            <span>Rola QH</span>
+                                            <span id="user"></span>
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -165,7 +142,7 @@
                                         <li>
                                             <a href="#">
                                                 <i class="fa fa-power-off"></i>
-                                                <span>Cerrar Session</span>
+                                                <span id="cerrarSession">Cerrar Session</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -182,18 +159,8 @@
     <div id="main" class="container-fluid">
         <div class="row">
             <div id="sidebar-left" class="col-xs-2 col-sm-2">
-                <ul class="nav main-menu">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active">
-                            <i class="fa fa-th-list"></i>
-                            <span class="hidden-xs">Mantenimiento</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Paginas/Mantenimientos/frmTable.aspx" class="active ajax-link">
-                            <span class="hidden-xs">Sintomas</span>
-                        </a></li>
-                        </ul>
-                    </li>
+                <ul class="nav main-menu" id="menu">
+                    
 
                     <%--<li>
                         <a href="ScriptsDev/ajax/dashboard.html" class="active ajax-link">
@@ -295,10 +262,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="ajax-link" href="ajax/calendar.html">
-                            <i class="fa fa-calendar"></i>
-                            <span class="hidden-xs">Calendar</span>
-                        </a>
+                        
                     </li>
                     <li>
                         <a class="ajax-link" href="Mantenimientos/frmTable.aspx">
@@ -391,5 +355,6 @@
     <script src="ScriptsDev/plugins/tinymce/jquery.tinymce.min.js"></script>
     <!-- All functions for this theme + document.ready processing -->
     <script src="ScriptsDev/js/devoops.js"></script>
+    
 </body>
 </html>

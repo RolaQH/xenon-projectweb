@@ -16,3 +16,5 @@
 --Nombres, [Usuario], Contrasena, IdRol) values(
 --	'0001', 'Quispe', 'Huarcaya', 'Rola', 'RolaQh', PwdEncrypt('92615356'),'001')
 --Select *  From Usuario
+
+--Select * From usuario Where PwdCompare('92615356', Contrasena) = 1

@@ -1901,22 +1901,22 @@ function displayFlickrImages(data){
 //
 function DemoFormValidator(){
 	$('#defaultForm').bootstrapValidator({
-		message: 'This value is not valid',
+	    message: 'Este valor no es válido',
 		fields: {
 			username: {
-				message: 'The username is not valid',
+			    message: 'Este valor no es válido',
 				validators: {
 					notEmpty: {
-						message: 'The username is required and can\'t be empty'
+					    message: 'Se requiere que el nombre de usuario y no puede estar vacío'
 					},
 					stringLength: {
 						min: 6,
-						max: 30,
-						message: 'The username must be more than 6 and less than 30 characters long'
+						max: 10,
+						message: 'El nombre de usuario debe ser mayor de 6 y menos de 10 caracteres'
 					},
 					regexp: {
 						regexp: /^[a-zA-Z0-9_\.]+$/,
-						message: 'The username can only consist of alphabetical, number, dot and underscore'
+						message: 'El nombre de usuario sólo puede consistir alfabético , número, puntos o subrayados'
 					}
 				}
 			},
@@ -1975,10 +1975,10 @@ function DemoFormValidator(){
 			password: {
 				validators: {
 					notEmpty: {
-						message: 'The password is required and can\'t be empty'
+					    message: 'La contraseña es necesaria y no puede estar vacío'
 					},
 					identical: {
-						field: 'confirmPassword',
+					    field: 'confirmPassword',
 						message: 'The password and its confirm are not the same'
 					}
 				}

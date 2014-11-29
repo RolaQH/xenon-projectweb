@@ -56,6 +56,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -352,8 +354,11 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Usuarios\rola.jpg" />
     <Content Include="Index.aspx" />
+    <Content Include="Index.js" />
     <Content Include="InicioSession\Login.aspx" />
+    <Content Include="InicioSession\Login.js" />
     <Content Include="Paginas\Mantenimientos\frmSintomas.aspx" />
     <Content Include="Paginas\Mantenimientos\frmSintomas.js" />
     <Content Include="Paginas\Mantenimientos\frmTable.aspx" />
@@ -420,6 +425,23 @@
     <Content Include="Scripts\FooTable-2\package.json" />
     <Content Include="Scripts\FooTable-2\README.md" />
     <Content Include="Scripts\FooTable-2\screenshot.pdn" />
+    <EntityDeploy Include="model\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="model\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="model\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="model\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ScriptsDev\ajax\calendar.html" />
     <Content Include="ScriptsDev\ajax\charts_coindesk.html" />
@@ -1023,9 +1045,25 @@
     </Compile>
     <Compile Include="InicioSession\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InicioSession\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="model\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Mantenimientos\frmSintomas.aspx.cs">
       <DependentUpon>frmSintomas.aspx</DependentUpon>
@@ -1072,6 +1110,9 @@
       <Project>{91f12cff-37f4-43ab-a166-8ab90d16ce79}</Project>
       <Name>Xenon.Core.Logic.Sales</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

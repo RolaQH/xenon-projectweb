@@ -59,9 +59,11 @@
     <Folder Include="Properties" />
     <Folder Include="Tablas" />
     <Folder Include="Pruebas" />
+    <Folder Include="Stored Procedure" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Tablas\01-Tablas.sql" />
+    <None Include="Stored Procedure\01- Login.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Pruebas\Sintomas Registros.sql" />
