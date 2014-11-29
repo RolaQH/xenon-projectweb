@@ -15,6 +15,7 @@ namespace Xenon.Core.Data.Sales
         public void Agregar(Sintomas sintomas) {
             SqlQuery<Sintomas> qry = new SqlQuery<Sintomas>();
             qry.Insert(sintomas);
+            
         }
 
         public void Editar(Sintomas sintomas) {

@@ -37,7 +37,7 @@ namespace Xenon.Core.Entity.Sales
         [MapField("IdEstadoCivil")]
         public int IdEstadoCivil { get; set; }
 
-        [MapField("ApellidoPaterno")]
+        [MapField("Celular")]
         public string Celular { get; set; }
 
         [MapField("Telefono")]
@@ -55,10 +55,10 @@ namespace Xenon.Core.Entity.Sales
         [MapField("CambioConDespues")]
         public Nullable<bool> CambioConDespues { get; set; }
 
-        [MapField("ApellidoPaterno")]
+        [MapField("CambioContraseña")]
         public string CambioContraseña { get; set; }
 
-        [MapField("Usuari")]
+        [MapField("Usuario")]
         public string Usuario1 { get; set; }
 
         [MapField("Contrasena")]
