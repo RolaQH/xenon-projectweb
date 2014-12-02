@@ -64,8 +64,10 @@
   <ItemGroup>
     <None Include="Tablas\01-Tablas.sql" />
     <None Include="Stored Procedure\01- Login.sql" />
+    <None Include="Pruebas\Prueba de Login.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Pruebas\Sintomas Registros.sql" />
+    <Build Include="Pruebas\Resgistro Ubigeo.sql" />
   </ItemGroup>
 </Project>

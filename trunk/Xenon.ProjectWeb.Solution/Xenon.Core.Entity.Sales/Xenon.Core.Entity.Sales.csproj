@@ -47,10 +47,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Componentes.cs" />
+    <Compile Include="CuadroClinico.cs" />
     <Compile Include="DTO\Item.cs" />
+    <Compile Include="EstadoCivil.cs" />
+    <Compile Include="EstadoFarmaco.cs" />
+    <Compile Include="Farmacos.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor.cs" />
     <Compile Include="Sintomas.cs" />
+    <Compile Include="TipoPersona.cs" />
+    <Compile Include="TipoUBigeo.cs" />
+    <Compile Include="Ubigeo.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup />

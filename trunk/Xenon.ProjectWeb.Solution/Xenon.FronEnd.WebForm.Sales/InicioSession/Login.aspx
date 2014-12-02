@@ -10,13 +10,14 @@
 		<meta name="author" content="Evgeniya"/>
 		<meta name="keyword" content="keywords"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <script src="../Scripts/jquery-1.8.2.js"></script>
-        <script src="../Scripts/jquery-ui-1.8.24.js"></script>
+        <script src="../ScriptsDev/plugins/jquery/jquery-2.1.0.min.js"></script>
+    <script src="../ScriptsDev/plugins/jquery-ui/jquery-ui.min.js"></script>
         <link href="../ScriptsDev/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
 		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'/>
         <link href="../ScriptsDev/css/style.css" rel="stylesheet" />
-        <script src="../ScriptsDev/plugins/bootstrapvalidator/bootstrapValidator.min.js"></script>
+<script src="../Scripts/Bootstrap%20Validator/dist/js/bootstrapValidator.min.js"></script>
+    <script src="../Scripts/Bootstrap%20Validator/dist/js/language/es_ES.js"></script>
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
@@ -67,7 +68,7 @@
 						    <input type="password" tabindex="2" id="pass" class="form-control vali" style="text-align:center; border-radius:0px;box-shadow:0px;border: 1px solid #BF4346;height:32px;" name="password" />
 					    </div>
 					    <div class="text-center">
-						    <button type="submit" tabindex="3" id="Ingreso" class="btn btn-primary" style="background-color:#333;border-radius:0px;box-shadow:0px;border: 1px solid #BF4346;height:35px;text-align:center;vertical-align:bottom;">Iniciar Sesion</button>
+						    <button type="submit" tabindex="3" id="Ingreso" class="btn btn-primary" style="background-color:#FFF;border-radius:0px;box-shadow:0px;border: 1px solid #BF4346;height:35px;text-align:center;vertical-align:bottom;">Iniciar Sesion</button>
                            
 					    </div>
                     </form>

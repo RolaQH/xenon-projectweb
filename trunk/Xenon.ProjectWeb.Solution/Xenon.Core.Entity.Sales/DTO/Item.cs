@@ -8,7 +8,7 @@ namespace Xenon.Core.Entity.Sales
 {
     public class Item
     {
-        public string Value { get; set; }
-        public string Text { get; set; }
+        public string id { get; set; }
+        public string text { get; set; }
     }
 }

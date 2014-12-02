@@ -32,11 +32,21 @@ namespace Xenon.Core.Logic.Sales
         #endregion
 
         #region Metodos
-
+        /// <summary>
+        /// Obtiene un Usuario
+        /// </summary>
+        /// <param name="cod"></param>
+        /// <returns></returns>
         public Usuario Obtener(string cod) {
             return Accessor.Obtener(cod);
         }
 
+        /// <summary>
+        /// Valida Ingreso al Sistema
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="contrasena"></param>
+        /// <returns></returns>
         public Usuario ValidarIngreso(string user, string contrasena)
         {
             return Accessor.ValidarIngreso(user, contrasena);
