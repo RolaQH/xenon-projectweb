@@ -7,7 +7,6 @@
     
     }
 </style>
-
 <div class="row">
 	<div id="breadcrumb" class="col-md-12">
 		<ol class="breadcrumb">
@@ -37,7 +36,7 @@
 				<div class="no-move"></div>
 			</div>
 
-			<div class="box-content no-padding table-responsive">
+			<div class="box-content no-padding table-responsive" id="contendido">
 				<table class="table table-bordered table-striped table-hover table-heading table-datatable" id="grilla">
 					<thead>
 						<tr>
@@ -46,7 +45,7 @@
                                 <label><input type="hidden"name="search_rate" value="Buscar Codigo" class="search_init" /></label>
 
                             </th>
-							<th><label><input type="text" name="search_rate" placeholder="Codigo Sintomas" class="search_init" /></label></th>
+						<th><label><input type="text" name="search_rate" placeholder="Codigo Sintomas" class="search_init" /></label></th>
 							<th><label><input type="text" name="search_name" placeholder="Descripcion" class="search_init" /></label></th>
 							<th><label><input type="text" name="search_votes" placeholder="Estado" class="search_init" /></label></th>
 						</tr>
@@ -86,7 +85,6 @@
 </div>
 
 <div id="Mensajes"></div>
-
     <!--gritter-->
     <link rel="stylesheet" type="text/css" href="ScriptsDev/gritter/css/jquery.gritter.css" />
     <script type="text/javascript" src="ScriptsDev/gritter/js/jquery.gritter.js"></script>
@@ -211,7 +209,7 @@
 
         });
         
-        var header_inputs = $("#grilla thead input");
+        var header_inputs = $(".dataTable thead input");
         header_inputs.on('keyup', function () {
             /* Filter on the column (the index) of this element */
             oTable.fnFilter(this.value, header_inputs.index(this));
@@ -245,7 +243,16 @@ function MakeSelect2(){
 }
 
 $(function () {
-    
+        $("#contendido").mCustomScrollbar({
+            theme: "minimal-dark",
+            setHeight:500,
+
+        });
+    //$("#ajax-content").mCustomScrollbar({
+    //    theme: "dark-3"
+    //});
+    MessageBoxInitial();
+    BoxControlInitial();
 	// Load Datatables and run plugin on tables 
 	LoadDataTablesScripts(AllTables);
 	// Add Drag-n-Drop feature

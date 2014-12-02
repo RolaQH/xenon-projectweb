@@ -10,6 +10,28 @@ GO
 USE BDBoticService
 GO
 
+CREATE TABLE [dbo].[TipoUBigeo](
+	[IdTipo] [INT] IDENTITY(0,1) NOT NULL,
+	[Descripcion] [VARCHAR](30) NULL,
+	[Estado] [BIT] NULL
+)
+GO
+
+CREATE TABLE [dbo].[Ubigeo](
+	[IdUbigeo] [INT] IDENTITY(1,1) NOT NULL,
+	[Descripcion] [VARCHAR](50) NULL,
+	[IdTipo] [INT] NULL,
+	[IdUbigeoRecu] [INT] NULL,
+	[Estado] [BIT] NULL
+)
+GO
+
+
+CREATE TABLE TipoPersona(
+	[IdTipo] int identity(1,1) constraint pk_Tipo  Primary key,
+	Descripcion varchar(30)
+)
+go
 
 CREATE TABLE EstadoCivil(
 	[IdEstadoCivil] [INT] IDENTITY(1,1) NOT NULL,
@@ -76,38 +98,26 @@ Go
 
 
 
-CREATE TABLE [dbo].[TipoUBigeo](
-	[IdTipo] [INT] IDENTITY(1,1) NOT NULL,
-	[Descripcion] [VARCHAR](30) NULL,
-	[Estado] [BIT] NULL
-)
-GO
 
-CREATE TABLE [dbo].[Ubigeo](
-	[IdUbigeo] [INT] IDENTITY(1,1) NOT NULL,
-	[Descripcion] [VARCHAR](50) NULL,
-	[IdUbigeoRecu] [INT] NULL,
-	[IdTipo] [INT] NULL,
-	[Estado] [BIT] NULL
-)
-GO
 
-CREATE TABLE [dbo].[Proveedor](
-	[IdProveedor] [CHAR](4) NOT NULL,
-	[RUC] [VARCHAR](30) NOT NULL,
-	[Razon Social] [VARCHAR](50) NULL,
-	[Contacto Proveedor] [VARCHAR](50) NULL,
-	[Ubigeo] [VARCHAR](Max) NULL,
-	[Direccion] [VARCHAR](30) NULL,
-	[Telefono] [VARCHAR](15) NULL,
-	[TelefonoContacto] [VARCHAR](15) NULL,
-	[Movil] [VARCHAR](15) NULL,
-	[Fax] [VARCHAR](15) NULL,
-	[Email] [VARCHAR](30) NULL,
-	[PaginaWeb] [VARCHAR](50) NULL,
-	[Estado] [BIT] NULL
+CREATE TABLE [dbo].[Proveedor] (
+    [IdProveedor]        CHAR (4)      NOT NULL,
+	[IdTipo]			int ,
+    [Documento]                VARCHAR (30)  NOT NULL,
+    [RazonSocialNombres]       VARCHAR (50)  NULL,
+    [ContactoProveedor] VARCHAR (50)  NULL,
+    [Ubigeo]             VARCHAR (50) NULL,
+    [Direccion]          VARCHAR (30)  NULL,
+    [Telefono]           VARCHAR (15)  NULL,
+    [TelefonoContacto]   VARCHAR (15)  NULL,
+    [Movil]              VARCHAR (15)  NULL,
+    [Fax]                VARCHAR (15)  NULL,
+    [Email]              VARCHAR (30)  NULL,
+    [PaginaWeb]          VARCHAR (50)  NULL,
+    [Estado]             BIT           NULL,
+	CONSTRAINT [FK_Proveedor_tipo] foreign key  ([IdTipo]) references TipoPersona([IdTipo])
 )
-GO
+Go
 
 
 CREATE TABLE [dbo].[Componentes](

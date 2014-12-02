@@ -11,9 +11,6 @@
     <meta name="description" content="description"/>
     <meta name="author" content="DevOOPS"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="Scripts/jquery-1.8.2.js"></script>
-    <script src="Scripts/jquery-ui-1.8.24.js"></script>
-
     <link href="ScriptsDev/plugins/bootstrap/bootstrap.css" rel="stylesheet"/>
     <link href="ScriptsDev/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
@@ -21,10 +18,9 @@
     <link href="ScriptsDev/plugins/fancybox/jquery.fancybox.css" rel="stylesheet"/>
     <link href="ScriptsDev/plugins/fullcalendar/fullcalendar.css" rel="stylesheet"/>
     <link href="ScriptsDev/plugins/xcharts/xcharts.min.css" rel="stylesheet"/>
-    <link href="ScriptsDev/plugins/select2/select2.css" rel="stylesheet"/>
     <link href="ScriptsDev/css/style.css" rel="stylesheet"/>
     <link href="ScriptsDev/css/style-responsive.css" rel="stylesheet" />
-    <script src="Index.js"></script>
+    
     <!-- <link href="ScriptsDev/css/stylexx.css" rel="stylesheet" />-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,7 +28,12 @@
             <script src="http://getbootstrap.com/docs-assets/js/respond.min.js"></script>
     <![endif]-->
 
+    
+    <!-- custom scrollbar stylesheet -->
+    <link href="Scripts/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
 </head>
+
 <body>
     <form runat="server">
         <asp:ScriptManager runat="server">
@@ -160,8 +161,6 @@
         <div class="row">
             <div id="sidebar-left" class="col-xs-2 col-sm-2">
                 <ul class="nav main-menu" id="menu">
-                    
-
                     <%--<li>
                         <a href="ScriptsDev/ajax/dashboard.html" class="active ajax-link">
                             <i class="fa fa-dashboard"></i>
@@ -334,11 +333,11 @@
                 </ul>
             </div>
             <!--Start Content-->
-            <div id="content" class="col-xs-12 col-sm-10">
+            <div id="content" class="col-xs-12 col-sm-10" >
                 <div class="preloader">
                     <img src="ScriptsDev/img/devoops_getdata.gif" class="devoops-getdata" alt="preloader" />
                 </div>
-                <div id="ajax-content"></div>
+                <div id="ajax-content" style="height:700px"></div>
             </div>
             <!--End Content-->
         </div>
@@ -353,8 +352,17 @@
     <script src="ScriptsDev/plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
     <script src="ScriptsDev/plugins/tinymce/tinymce.min.js"></script>
     <script src="ScriptsDev/plugins/tinymce/jquery.tinymce.min.js"></script>
+        <!-- custom scrollbar plugin -->
+    <script src="Scripts/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- All functions for this theme + document.ready processing -->
     <script src="ScriptsDev/js/devoops.js"></script>
-    
+    <script src="Index.js"></script>
+
+    <script src="Scripts/select2-3.5.2/select2.js"></script>
+<link href="Scripts/select2-3.5.2/select2.css" rel="stylesheet" />
+<script src="Scripts/select2-3.5.2/select2_locale_es.js"></script>
+<%--<style>
+		html, body{ height: 100%; }
+	</style>--%>
 </body>
 </html>

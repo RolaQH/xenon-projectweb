@@ -92,6 +92,4 @@ var ControlBox = function (title) {
 
 $(function () {
     $('#ControlDiv').hide();
-    MessageBoxInitial();
-    BoxControlInitial();
 });

@@ -47,9 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ComponentesLogic.cs" />
+    <Compile Include="CuadroClinicoLogic.cs" />
+    <Compile Include="EstadoCivilLogic.cs" />
+    <Compile Include="EstadoFarmacoLogic.cs" />
+    <Compile Include="FarmacosLogic.cs" />
     <Compile Include="MenuLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorLogic.cs" />
     <Compile Include="SintomasLogic.cs" />
+    <Compile Include="TipoPersonaLogic.cs" />
+    <Compile Include="TipoUBigeoLogic.cs" />
+    <Compile Include="UbigeoLogic.cs" />
     <Compile Include="UsuarioLogic.cs" />
   </ItemGroup>
   <ItemGroup>

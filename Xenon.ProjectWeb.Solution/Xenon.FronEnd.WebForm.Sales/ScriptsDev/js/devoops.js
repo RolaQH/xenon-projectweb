@@ -271,7 +271,8 @@ function LoadAjaxContent(url){
 		url: url,
 		type: 'GET',
 		success: function(data) {
-			$('#ajax-content').html(data);
+		    $('#ajax-content').html(data);
+		    
 			$('.preloader').hide();
 		},
 		error: function (jqXHR, textStatus, errorThrown) {

@@ -80,8 +80,8 @@ namespace Xenon.Core.Logic.Sales
         {
             var lista = Accessor.Listar();
             return lista.Select(x => new Item { 
-                Value = x.IdSintoma,
-                Text = x.Descripcion
+                id = x.IdSintoma,
+                text = x.Descripcion
             }).ToList();
         }
 

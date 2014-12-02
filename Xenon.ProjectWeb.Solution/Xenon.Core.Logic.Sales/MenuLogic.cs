@@ -32,6 +32,12 @@ namespace Xenon.Core.Logic.Sales
         #endregion
 
         #region Metodos
+
+        /// <summary>
+        /// Lista Menu por Rol
+        /// </summary>
+        /// <param name="idRol"></param>
+        /// <returns></returns>
         public List<Menu> GeneraMenu(string idRol)
         {
             return Accessor.GeneraMenu(idRol);

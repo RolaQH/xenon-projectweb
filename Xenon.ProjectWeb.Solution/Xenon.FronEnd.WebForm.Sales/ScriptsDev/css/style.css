@@ -1,5 +1,5 @@
 body {
-  color: #525252;
+  color: #777;
   /*background: #6AA6D6 url(../img/devoops_pattern_b10.png) 0 0 repeat;*/
 }
 .body-expanded, .modal-open {
@@ -18,7 +18,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 #logo {
   position:relative;
-  background: none repeat scroll 0% 0% #E74C3C;
+  background: none repeat scroll 0% 0% #A34555;
 }
 #logo a {
   color: #fff;
@@ -110,20 +110,21 @@ a.show-sidebar:hover {
 }
 .nav.main-menu > li > a:hover, .nav.main-menu > li > a:focus, .nav.main-menu > li.active > a, .nav.main-menu .open > a, .nav.main-menu .open > a:hover, .nav.main-menu .open > a:focus, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li.active > a,
 .nav.msg-menu > li > a:hover, .nav.msg-menu > li > a:focus, .nav.msg-menu > li.active > a, .nav.msg-menu .open > a, .nav.msg-menu .open > a:hover, .nav.msg-menu .open > a:focus {
-  background:none repeat scroll 0% 0% #E74C3C;
-  color:#f0f0f0;
+  background:none repeat scroll 0% 0% #A34555;
+  color:#fff;
 }
 .nav.main-menu a.active, .nav.msg-menu a.active {
   background:none repeat scroll 0% 0% #E74C3C;
+
 }
 .nav.main-menu a.active:hover, .nav.msg-menu a.active:hover {
-  background:none repeat scroll 0% 0% #E74C3C;
+  background:none repeat scroll 0% 0% #A34555;
 }
 .nav.main-menu a.active-parent, .nav.msg-menu a.active-parent {
-  background: none repeat scroll 0% 0% #E74C3C;
+  background: none repeat scroll 0% 0% #A34555;
 }
 .nav.main-menu a.active-parent:hover, .nav.msg-menu a.active-parent:hover {
-  background: none repeat scroll 0% 0% #E74C3C;
+  background: none repeat scroll 0% 0% #A34555;
 }
 .nav.main-menu > li > a > i, .nav.msg-menu > li > a > i {
   font-size: 18px;
@@ -185,7 +186,7 @@ a.show-sidebar:hover {
 #search > input {
   width: 80%;
   background: none repeat scroll 0% 0% #333;
-  border: 1px solid #E74C3C;
+  border: 1px solid #a34555;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -335,13 +336,13 @@ a.show-sidebar:hover {
   /*-webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;*/
-  color: #363636;
+  color: white;
   font-size: 16px;
   position:relative;
   overflow: hidden;
-  background: white;
-  border-bottom: 1px solid #E4E4E4;
-  height: 28px;
+  background: #333;
+  border-bottom: 1px solid #FF4040;
+  height: 34px;
 }
 .box-name, .modal-header-name {
   padding-left: 15px;
@@ -392,7 +393,7 @@ a.show-sidebar:hover {
 .box-icons a {
   cursor: pointer;
   text-decoration: none !important;
-  border-left: 1px solid #fafafa;
+  border-left: 0px solid #fafafa;
   height: 26px;
   line-height: 26px;
   width: 28px;
@@ -599,8 +600,8 @@ ul.DTTT_dropdown.dropdown-menu > li:hover > a {
 #breadcrumb {
   padding: 0;
   line-height: 40px;
-  background: none repeat scroll 0% 0% #BF4346;
-  background: none repeat scroll 0% 0% #BF4346;
+  background: none repeat scroll 0% 0% #333;
+  /*background: none repeat scroll 0% 0% #BF4346;*/
   margin-bottom: 20px;
 }
 .breadcrumb {
@@ -1295,7 +1296,7 @@ td.beauty-hover {
   color: #000;
 }
 .form-control {
-  height: 26px;
+  height: 34px;
   padding: 2px 12px;
 }
 .input-lg {
@@ -1405,6 +1406,8 @@ td.beauty-hover {
   width: 26px;
   height: 26px;
   line-height: 26px;
+  top: 3px;
+  right: 15px;
 }
 .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
   min-height: inherit;
@@ -2219,7 +2222,7 @@ td.beauty-hover {
   background-color: #BF4346;
 }
 .pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
-  color: #979797;
+  color: #fff;
   cursor: not-allowed;
   background-color: #FCFCFC;
   border-color: #D8D8D8;
@@ -2228,7 +2231,7 @@ td.beauty-hover {
   z-index: 2;
   color: #fff;
   cursor: default;
-  background-color: #6AA6D6;
+  background-color:#a34555;
   border-color: #6AA6D6;
 }
 .fancybox-nav {
@@ -2302,6 +2305,7 @@ td.beauty-hover {
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;
+    border-bottom: 1px solid #3C4C69;
   }
   .page-404 .form-inline {
     width: 40%;
