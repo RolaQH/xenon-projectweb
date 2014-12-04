@@ -52,12 +52,12 @@
 					</thead>
 					<tbody>
 					</tbody>
-					<tfoot style="background:#333;border:0px;color:white;">
+					<tfoot style="background:#2B5797;border:0px;color:white;">
 						<tr>
-                            <th style="background:#333;border:0px;" class="center">Acciones</th>
-							<th style="background:#333;border:0px;" class="center">Codigo</th>
-							<th style="background:#333;border:0px;" class="center">Descipcion</th>
-							<th style="background:#333;border:0px;" class="center">Estado</th>
+                            <th style="border:0px;" class="center">Acciones</th>
+							<th style="border:0px;" class="center">Codigo</th>
+							<th style="border:0px;" class="center">Descipcion</th>
+							<th style="border:0px;" class="center">Estado</th>
 						</tr>
 					</tfoot>
 				</table>

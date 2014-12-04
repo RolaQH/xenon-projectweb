@@ -53,7 +53,7 @@
 			<div class="box" style="Background:#fff">
 				<div class="box-content" style="Background:#fff">
 					<div class="text-center">
-						<h3 class="page-header" style="color:#fff">BoticService Login</h3>
+						<h3 class="page-header" style="color:#2B5797">BoticService Login</h3>
 					</div>
                     <form id="defaultForm" method="post" action="../Index.aspx"  class="form-horizontal">
                         <div class="text-center">
@@ -61,14 +61,14 @@
                             </div>
 					    <div class="form-group">
 						    <label class="control-label" style="color:black">Usuario</label>
-						    <input type="text" tabindex="1" class="form-control caja vali" style="text-align:center;border-radius:0px;box-shadow:0px;border: 1px solid #BF4346;height:32px;" id="user" name="username" />
+						    <input type="text" tabindex="1" class="form-control caja vali" style="text-align:center;border-radius:0px;box-shadow:0px;border: 1px solid #2B5797;height:32px;" id="user" name="username" />
 					    </div>
 					    <div class="form-group">
 						    <label class="control-label" style="color:black">Comtraseña</label>
-						    <input type="password" tabindex="2" id="pass" class="form-control vali" style="text-align:center; border-radius:0px;box-shadow:0px;border: 1px solid #BF4346;height:32px;" name="password" />
+						    <input type="password" tabindex="2" id="pass" class="form-control vali" style="text-align:center; border-radius:0px;box-shadow:0px;border: 1px solid #2B5797;height:32px;" name="password" />
 					    </div>
 					    <div class="text-center">
-						    <button type="submit" tabindex="3" id="Ingreso" class="btn btn-primary" style="background-color:#FFF;border-radius:0px;box-shadow:0px;border: 1px solid #BF4346;height:35px;text-align:center;vertical-align:bottom;">Iniciar Sesion</button>
+						    <button type="submit" tabindex="3" id="Ingreso" class="btn btn-primary" style="color:#2B5797;background-color:#FFF;border-radius:0px;box-shadow:0px;border: 1px solid #2B5797;height:35px;text-align:center;vertical-align:bottom;">Iniciar Sesion</button>
                            
 					    </div>
                     </form>
