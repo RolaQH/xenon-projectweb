@@ -35,7 +35,6 @@
 				</div>
 				<div class="no-move"></div>
 			</div>
-            <button id="btn">valror</button>
 			<div class="box-content no-padding table-responsive" id="contendido">
 				<table class="table table-bordered table-striped table-hover table-heading table-datatable" id="grilla" style="width:3000px;">
 					 
@@ -253,8 +252,25 @@
 
     }
 
-    $(function () {
+    function OcultarCboUbigeo(ocul) {
+        if (ocul == "fast") {
+            $('#divDistrito').hide(ocul);
+            $('#divPais').hide(ocul);
+            $('#divProvincia').hide(ocul);
+            $('#divDepartamento').hide(ocul);
+        }
+        else {
+            $("#divDepartamento").show(ocul);
+            $('#divDistrito').show(ocul);
+            $('#divPais').show(ocul);
+            $('#divProvincia').show(ocul);
 
+        }
+
+    }
+
+    $(function () {
+        OcultarCboUbigeo("fast");
         //$('.form-control').tooltip();
         $('#frmProveedor')
         .bootstrapValidator({
@@ -282,12 +298,12 @@
             }
         })
         .on('error.field.bv', function (e, data) {
-            
+
             // Get the tooltip
             var $parent = data.element.parents('.form-group'),
                 $icon = $parent.find('.form-control-feedback[data-bv-icon-for="' + data.field + '"]'),
                 title = $icon.data('bs.tooltip').getTitle();
-            
+
             // Destroy the old tooltip and create a new one positioned to the right
             $icon.tooltip('destroy').tooltip({
                 html: true,
@@ -295,6 +311,9 @@
                 title: title,
                 container: '#myModal'
             });
+        }).on('success.form.bv', function (e) {
+            e.preventDefault();
+            Actualizar();
         });
 
         //Scroll
@@ -345,7 +364,6 @@
             Limpiar();
             K_OPERACION_ACTUAL = K_OPERACION_ACTUALIZAR;
             var cod = $(this).data("codigo").replace('"', "");
-            
             cod = cod.replace('"', "")
             ObtienePorId($.trim(cod));
         });
@@ -373,7 +391,7 @@
 
 
         $("#btnAdd").click(function () {
-            ControlBox("Agregar Sintoma");
+            
             Limpiar();
             K_OPERACION_ACTUAL = K_OPERACION_NUEVO;
             DatosAjax('POST', 'Paginas/Mantenimientos/frmProveedor.aspx/GeneraIdCallback', "", GenerarId);
@@ -404,6 +422,12 @@
     var Pais = "";
 
 
+    function Limpiar() {
+        $("#frmProveedor").find(":input").each(function () {
+            this.value = "";
+        });
+    }
+
     ///Funcion Agrega o modifica segun Desicion del Usuario
     var Actualizar = function () {
 
@@ -413,7 +437,7 @@
             Documento: $("#txtDoc").val(),
             RazonSocialNombres: $("#txtNom").val(),
             ContactoProveedor: $("#txtContacto").val(),
-            Ubigeo: $("#cboPais").val() + "-" + $("#cboDepartamento").val() + "-" + $("#cboProvinvia").val() + "-" + $("#divDistrito").val(),
+            Ubigeo: $("#cboPais").val() + "-" + $("#cboDepartamento").val() + "-" + $("#cboProvinvia").val() + "-" + $("#cboProvinvia").val(),
             Direccion: $("#txtDir").val(),
             Telefono: $("#txtTel").val(),
             TelefonoContacto: $("#txtTelCon").val(),
@@ -459,19 +483,16 @@
         $('#txtCod').val(data.d);
     }
 
-    ///Limpia controles
-    var Limpiar = function () {
-        //$("#txtCod").val("");
-        //$("#txtDes").val("");
-    }
+    
 
     ///Muestra datos en Venta al Modificar
     function CargarDatos(data) {
         var ubigeoArray = data.d.Ubigeo.split("-");
-        listarPais(ubigeoArray[0] != null ? ubigeoArray[i] : "-1");
-        ListarDepartamento(ubigeoArray[1] != null ? ubigeoArray[i] : "-1");
-        ListarProvincia(ubigeoArray[2] != null ? ubigeoArray[i] : "-1");
-        ListarDistrito(ubigeoArray[3] != null ? ubigeoArray[i] : "-1");
+        listarPais(ubigeoArray[0] != null ? ubigeoArray[0] : "-1");
+        ListarDepartamento(ubigeoArray[1] != null ? ubigeoArray[1] : "-1");
+        ListarProvincia(ubigeoArray[2] != null ? ubigeoArray[2] : "-1");
+        ListarDistrito(ubigeoArray[3] != null ? ubigeoArray[3] : "-1");
+        OcultarCboUbigeo("slow");
         $('#txtCod').val(data.d.IdSintoma);
         $("#cboTipoPersona").val(data.d.IdTipo);
         $("#txtDoc").val(data.d.Documento);
@@ -484,7 +505,6 @@
         $("#txtFax").val(data.d.Fax);
         $("#txtEmail").val(data.d.Email);
         $("#txtWeb").val(data.d.PaginaWeb);
-        alert(data.d.Estado);
         if (data.d.Estado == "false")
             $('#chkEstado').prop('checked', true);
         else
