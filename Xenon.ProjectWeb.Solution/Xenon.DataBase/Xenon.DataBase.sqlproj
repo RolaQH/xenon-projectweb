@@ -69,5 +69,6 @@
   <ItemGroup>
     <Build Include="Pruebas\Sintomas Registros.sql" />
     <Build Include="Pruebas\Resgistro Ubigeo.sql" />
+    <Build Include="Tablas\02-TablasPedido.sql" />
   </ItemGroup>
 </Project>

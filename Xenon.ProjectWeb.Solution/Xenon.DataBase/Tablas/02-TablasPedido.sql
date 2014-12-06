@@ -1,0 +1,71 @@
+--Use BDBoticService
+--Go
+
+
+--CREATE TABLE [dbo].[Clientes](
+--	[IdCliente] [CHAR](5) NOT NULL,
+--	[ApellidoMaterno] [VARCHAR](30),
+--	[ApellidoPaterno] [VARCHAR](30),
+--	[Nombres] [VARCHAR](30),
+--	[IdDistrito] [varchar](3),
+--	[Direccion] [VARCHAR](50),
+--	[Celular] [VARCHAR](9),
+--	[Telefono][VARCHAR](9),
+--	[DNI][VARCHAR](8),
+--	[Estado][bit],
+--	CONSTRAINT PK_Cliente PRIMARY KEY CLUSTERED ([IdCliente] ASC)
+--)
+--go
+
+--CREATE TABLE [dbo].[TipoCondicionPago](
+--	[IdTipoCondicion] [INT] IDENTITY(1,1) NOT NULL,
+--	[Descripcion] [VARCHAR](30),
+--	CONSTRAINT [PK_TipoCondicionPago] PRIMARY KEY CLUSTERED ([IdTipoCondicion] ASC)
+--)
+--GO
+
+--CREATE TABLE [dbo].[Tipo_Documento] (
+--    [Id_TipoDocumento]   INT           IDENTITY (1, 1) NOT NULL,
+--    [Documento] NVARCHAR (50) NULL,
+--    [Serie]     NVARCHAR (3)  NULL,
+--    [Numero]    NVARCHAR (7)  NULL,
+--    [Estado]    BIT           NULL,
+--    CONSTRAINT [PK_Tipo_Doc] PRIMARY KEY CLUSTERED ([Id_TipoDocumento] ASC)
+--);
+
+--CREATE TABLE [dbo].[Pedido](
+--	[IdPedido] [VARCHAR](11) NOT NULL,
+--	[IdCliente] [CHAR](5) null,
+--	[Id_TipoDocumento] [int] null,
+--	[IdTipoCondicion] [INT] null,
+--	[ValorVenta] REAL,
+--	[Subtotal] REAL,
+--	Descuento Real,
+--	Interes real,
+--	IGV real,
+--	Total real,
+--	FechaEmision datetime default getdate(),
+--	[IdUsuario] char(4) null,
+--	constraint PK_Pedido PRIMARY KEY CLUSTERED ([IdPedido] ASC),
+--	constraint FK_Pedido_Cliente Foreign key ([IdCliente]) references [dbo].[Clientes]([IdCliente]),
+--	constraint FK_Pedido_TDocumento foreign key ([Id_TipoDocumento]) references [dbo].[Tipo_Documento] ([Id_TipoDocumento]),
+--	constraint FK_Pedido_TCondicionPago Foreign key ([IdTipoCondicion]) references [dbo].[TipoCondicionPago]([IdTipoCondicion]),
+--	constraint FK_Pedido_Usuario foreign key ([IdUsuario]) references [dbo].[Usuario]([IdUsuario])
+--)
+--Go
+
+--CREATE TABLE [dbo].[DetallePedido](
+--	[IdDetallePedido] INT IDENTITY(1,1) NOT NULL,
+--	[IdPedido] [VARCHAR](11) NOT NULL,
+--	[IdProducto] [CHAR](12) NOT NULL,
+--	Precio Real,
+--	Cantidad int,
+--	DescuentoUnitario real,
+--	InteresUnitario Real,
+--	ImporteTotal real,
+--	Estado bit,
+--	constraint Pk_DatallePedido primary key clustered ([IdDetallePedido] asc),
+--	constraint FK_Detalle_Pedido foreign key ([IdPedido]) references [dbo].[Pedido]([IdPedido]),
+--	constraint FK_Detalle_Producto  foreign key ([IdProducto]) references [dbo].[Productos]([IdProducto])
+--)
+--Go
