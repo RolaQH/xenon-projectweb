@@ -37,3 +37,6 @@
 --Insert into Rol_Menu values(3,'001')
 
 --Insert into Usuario values('0001', 'Quispe', 'Huarcaya', 'Rola', 'Manchay', 1,'7-56-73', '45213547', 'Estudiante Instituto', 1, '952054337', null, null,GETDATE(), 'Images/Usuarios/rola.jpg',null, null, 'RolaQH',PwdEncrypt('92615356'), '001')
+
+--Insert into Usuario values('0002', 'Ramirez', 'Ramos', 'Willy', 'Manchay', 1,'7-56-73', '75716842', 'Estudiante Instituto', 1, '952054337', null, null,GETDATE(), '',null, null, 'dankito',PwdEncrypt('tonyselacome'), '001')
+--Insert into Usuario values('0003', 'Carrasco', 'Olivares', 'tony', 'Manchay', 1,'7-56-73', '71841327', 'Estudiante Instituto', 1, '952054337', null, null,GETDATE(), '',null, null, 'tony',PwdEncrypt('willyselacometodo'), '001')
