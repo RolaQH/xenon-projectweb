@@ -30,7 +30,7 @@ function validacion() {
                         message: 'Se requiere que el nombre de usuario y no puede estar vacío'
                     },
                     stringLength: {
-                        min: 6,
+                        min: 4,
                         max: 10,
                         message: 'El nombre de usuario debe ser mayor de 6 y menos de 10 caracteres'
                     },
@@ -47,7 +47,7 @@ function validacion() {
                     },
                     stringLength: {
                         min: 6,
-                        max: 10,
+                        max: 20,
                         message: 'La Contraseña debe ser mayor de 6 y menos de 10 caracteres'
                     },
                     regexp: {
