@@ -18,3 +18,14 @@
 --Select *  From Usuario
 
 --Select * From usuario Where PwdCompare('92615356', Contrasena) = 1
+
+
+--Select * From EstadoCivil
+
+
+--Select * From Rol_Menu
+--Select * from [dbo].[Seccion]
+
+--INSERT INTO Menu VALUES('Estado Civil', 1, '','', 'Paginas/Mantenimientos/frmEstadoCivil.aspx')
+
+--Insert into Rol_Menu values(4,'001')
