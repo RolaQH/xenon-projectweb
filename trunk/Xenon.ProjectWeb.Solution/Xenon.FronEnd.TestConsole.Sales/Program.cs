@@ -28,21 +28,23 @@ namespace Xenon.FronEnd.TestConsole.Sales
             //Console.WriteLine(pass);
             //Console.ReadKey();
 
-            var usuario = UsuarioLogic.GetInstance.ValidarIngreso("RolaQh", "92615356");
-            if (usuario == null)
-            {
-                Console.WriteLine("No Existe Usuario");
-            }
-            else {
-                Console.WriteLine(usuario.IdRol);
-                List<Menu> menu = MenuLogic.GetInstance.GeneraMenu(usuario.IdRol);
-                foreach (Menu m in menu)
-                {
-                    Console.WriteLine(m.IdMenu);
-                }
+            //var usuario = UsuarioLogic.GetInstance.ValidarIngreso("RolaQh", "92615356");
+            //if (usuario == null)
+            //{
+            //    Console.WriteLine("No Existe Usuario");
+            //}
+            //else {
+            //    Console.WriteLine(usuario.IdRol);
+            //    List<Menu> menu = MenuLogic.GetInstance.GeneraMenu(usuario.IdRol);
+            //    foreach (Menu m in menu)
+            //    {
+            //        Console.WriteLine(m.IdMenu);
+            //    }
 
-            }
-            Console.ReadKey();
+            //}
+            //Console.ReadKey();
+
+
             
         }
     }

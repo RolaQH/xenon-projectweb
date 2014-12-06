@@ -359,6 +359,7 @@
     <Content Include="Index.js" />
     <Content Include="InicioSession\Login.aspx" />
     <Content Include="InicioSession\Login.js" />
+    <Content Include="Paginas\Mantenimientos\frmEstadoCivil.aspx" />
     <Content Include="Paginas\Mantenimientos\frmProveedor.aspx" />
     <Content Include="Paginas\Mantenimientos\frmSintomas.aspx" />
     <Content Include="Paginas\Mantenimientos\frmSintomas.js" />
@@ -2967,6 +2968,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmEstadoCivil.aspx.cs">
+      <DependentUpon>frmEstadoCivil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmEstadoCivil.aspx.designer.cs">
+      <DependentUpon>frmEstadoCivil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Mantenimientos\frmProveedor.aspx.cs">
       <DependentUpon>frmProveedor.aspx</DependentUpon>

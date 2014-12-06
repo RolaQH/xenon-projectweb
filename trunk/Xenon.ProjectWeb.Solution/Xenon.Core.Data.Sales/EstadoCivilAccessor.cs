@@ -12,12 +12,9 @@ namespace Xenon.Core.Data.Sales
 {
     public abstract class EstadoCivilAccessor : AccessorBase<EstadoCivilAccessor>
     {
-        public void Agregar(EstadoCivil estadoCivil)
-        {
-            SqlQuery<EstadoCivil> qry = new SqlQuery<EstadoCivil>();
-            qry.Insert(estadoCivil);
 
-        }
+        [SqlQuery("Insert into EstadoCivil values(@descripcion)")]
+        public abstract void Agregar(string @descripcion);
 
         public void Editar(EstadoCivil estadoCivil)
         {
