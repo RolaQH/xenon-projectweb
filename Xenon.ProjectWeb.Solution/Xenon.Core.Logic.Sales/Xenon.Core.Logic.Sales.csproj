@@ -55,6 +55,7 @@
     <Compile Include="MenuLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorLogic.cs" />
+    <Compile Include="SeccionLogic.cs" />
     <Compile Include="SintomasLogic.cs" />
     <Compile Include="TipoPersonaLogic.cs" />
     <Compile Include="TipoUBigeoLogic.cs" />

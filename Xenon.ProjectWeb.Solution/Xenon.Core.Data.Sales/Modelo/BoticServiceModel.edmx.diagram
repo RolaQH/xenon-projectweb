@@ -5,6 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="816eb803513d4d3eb9149b1218e8d593" Name="Diagram1" >
+        <EntityTypeShape EntityType="BDBoticServiceModel.Seccion" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

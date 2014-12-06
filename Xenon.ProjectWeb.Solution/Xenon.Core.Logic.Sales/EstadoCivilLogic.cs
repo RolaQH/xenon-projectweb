@@ -36,7 +36,7 @@ namespace Xenon.Core.Logic.Sales
         /// Agrega Nuevo EstadoCivil
         /// </summary>
         /// <param name="sintomas"></param>
-        public void Agregar(EstadoCivil estadoCivil)
+        public void Agregar(string estadoCivil)
         {
             Accessor.Agregar(estadoCivil);
         }
