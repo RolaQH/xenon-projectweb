@@ -9,7 +9,7 @@ Go
 
 Create Procedure Sp_ValidarIngreso(
 	@user varchar(50),
-	@contrasena Varchar(10)
+	@contrasena Varchar(20)
 )
 AS 
 	Select * From Usuario Where Usuario = @user and  PwdCompare(@contrasena, Contrasena) = 1
