@@ -33,39 +33,67 @@
 --    CONSTRAINT [PK_Tipo_Doc] PRIMARY KEY CLUSTERED ([Id_TipoDocumento] ASC)
 --);
 
---CREATE TABLE [dbo].[Pedido](
---	[IdPedido] [VARCHAR](11) NOT NULL,
---	[IdCliente] [CHAR](5) null,
---	[Id_TipoDocumento] [int] null,
---	[IdTipoCondicion] [INT] null,
---	[ValorVenta] REAL,
---	[Subtotal] REAL,
---	Descuento Real,
---	Interes real,
---	IGV real,
---	Total real,
---	FechaEmision datetime default getdate(),
---	[IdUsuario] char(4) null,
---	constraint PK_Pedido PRIMARY KEY CLUSTERED ([IdPedido] ASC),
---	constraint FK_Pedido_Cliente Foreign key ([IdCliente]) references [dbo].[Clientes]([IdCliente]),
---	constraint FK_Pedido_TDocumento foreign key ([Id_TipoDocumento]) references [dbo].[Tipo_Documento] ([Id_TipoDocumento]),
---	constraint FK_Pedido_TCondicionPago Foreign key ([IdTipoCondicion]) references [dbo].[TipoCondicionPago]([IdTipoCondicion]),
---	constraint FK_Pedido_Usuario foreign key ([IdUsuario]) references [dbo].[Usuario]([IdUsuario])
+
+
+--CREATE TABLE [dbo].[Pedido] (
+--    [IdPedido]         VARCHAR (11) NOT NULL,
+--    [IdCliente]        CHAR (5)     NULL,
+--    [Id_TipoDocumento] INT          NULL,
+--    [IdTipoCondicion]  INT          NULL,
+--    [ValorVenta]       REAL         NULL,
+--    [Subtotal]         REAL         NULL,
+--    [Descuento]        REAL         NULL,
+--    [Interes]          REAL         NULL,
+--    [IGV]              REAL         NULL,
+--    [Total]            REAL         NULL,
+--    [FechaEmision]     DATETIME     DEFAULT (getdate()) NULL,
+--    [IdUsuario]        CHAR (4)     NULL,
+--	[IdEstado]		INT Null,
+--    CONSTRAINT [PK_Pedido] PRIMARY KEY CLUSTERED ([IdPedido] ASC),
+--    CONSTRAINT [FK_Pedido_Cliente] FOREIGN KEY ([IdCliente]) REFERENCES [dbo].[Clientes] ([IdCliente]),
+--    CONSTRAINT [FK_Pedido_TDocumento] FOREIGN KEY ([Id_TipoDocumento]) REFERENCES [dbo].[Tipo_Documento] ([Id_TipoDocumento]),
+--    CONSTRAINT [FK_Pedido_TCondicionPago] FOREIGN KEY ([IdTipoCondicion]) REFERENCES [dbo].[TipoCondicionPago] ([IdTipoCondicion]),
+--    CONSTRAINT [FK_Pedido_Usuario] FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuario] ([IdUsuario]),
+--	CONSTRAINT [FK_Pedido_Estado] FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[EstadoDocumentos] ([IdEstado])
 --)
 --Go
 
---CREATE TABLE [dbo].[DetallePedido](
---	[IdDetallePedido] INT IDENTITY(1,1) NOT NULL,
---	[IdPedido] [VARCHAR](11) NOT NULL,
---	[IdProducto] [CHAR](12) NOT NULL,
---	Precio Real,
---	Cantidad int,
---	DescuentoUnitario real,
---	InteresUnitario Real,
---	ImporteTotal real,
---	Estado bit,
---	constraint Pk_DatallePedido primary key clustered ([IdDetallePedido] asc),
---	constraint FK_Detalle_Pedido foreign key ([IdPedido]) references [dbo].[Pedido]([IdPedido]),
---	constraint FK_Detalle_Producto  foreign key ([IdProducto]) references [dbo].[Productos]([IdProducto])
+--CREATE TABLE [dbo].[DetallePedido] (
+--    [IdDetallePedido]   INT          IDENTITY (1, 1) NOT NULL,
+--    [IdPedido]          VARCHAR (11) NOT NULL,
+--    [IdProducto]        CHAR (12)    NOT NULL,
+--    [Precio]            REAL         NULL,
+--    [Cantidad]          INT          NULL,
+--    [DescuentoUnitario] REAL         NULL,
+--    [InteresUnitario]   REAL         NULL,
+--    [ImporteTotal]      REAL         NULL,
+--    [Estado]            BIT          NULL,
+--    CONSTRAINT [Pk_DatallePedido] PRIMARY KEY CLUSTERED ([IdDetallePedido] ASC),
+--    CONSTRAINT [FK_Detalle_Pedido] FOREIGN KEY ([IdPedido]) REFERENCES [dbo].[Pedido] ([IdPedido]),
+--    CONSTRAINT [FK_Detalle_Producto] FOREIGN KEY ([IdProducto]) REFERENCES [dbo].[Productos] ([IdProducto])
+--);
+
+
+--CREATE TABLE [dbo].[EstadoDocumentos](
+--	[IdEstado] INT identity(1,1) Not Null,
+--	[Descripcion] Varchar(30),
+--	Constraint PK_EstadoDoc Primary key Clustered([IdEstado] asc) 
 --)
 --Go
+
+
+--CREATE TABLE [dbo].[ComprobantePago](
+--	IdDocumento Char(11) Not null,
+--	IdPedido Varchar(11) null,
+--	[Id_TipoDocumento] INT null,
+--	FechaEmision Datetime default GetDate(),
+--	[IdUsuario] Char(4) Null,
+--	[IdEstado] INT Null,
+--	Constraint PK_Comprobante Primary key Clustered (IdDocumento asc),
+--	Constraint FK_Comprobante_Pedido Foreign Key (IdPedido) References [dbo].[Pedido](IdPedido),
+--	Constraint FK_Comprobante_TipoDocumento Foreign Key ([Id_TipoDocumento]) References [dbo].[Tipo_Documento]([Id_TipoDocumento]),
+--	Constraint FK_Comprobante_Usuario Foreign Key ([IdUsuario]) References [dbo].[Usuario]([IdUsuario]),
+--	Constraint FK_Comprobante_Estado Foreign Key ([IdEstado]) References [dbo].[EstadoDocumentos]([IdEstado])
+--)
+--Go
+
