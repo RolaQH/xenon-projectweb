@@ -258,6 +258,30 @@ CREATE TABLE [dbo].[Productos](
 )
 GO
 
+Create Table [dbo].[ProductoxCuadroClinico](
+	[IdProducto]  Char(12) Not Null,
+	[IdCuadroClinico] Char(4) Not Null,
+	Constraint FK_ProductoxCuadroClinico Foreign Key ([IdProducto]) references [dbo].[Productos] ([IdProducto]),
+	Constraint FK_CuadroClinico_Producto  Foreign Key([IdCuadroClinico]) References [dbo].[CuadroClinico]([IdCuadroClinico])
+)
+go
+
+Create Table [dbo].[ProductoXSintomas](
+	[IdProducto]  Char(12) Not Null,
+	[IdSintoma] Char(4) Not null,
+	Constraint FK_ProductoXSintomas Foreign key ([IdProducto]) references [dbo].[Productos] ([IdProducto]),
+	Constraint FK_SintomasXProductos Foreign key ([IdSintoma]) References [dbo].[Sintomas]([IdSintoma])
+)
+Go
+
+Create Table [dbo].[ProductoXComponente](
+	[IdProducto]  Char(12) Not Null,
+	[IdComponente] Char(4) Not Null,
+	Constraint FK_ProductoXComponente Foreign key ([IdProducto]) references [dbo].[Productos] ([IdProducto]),
+	Constraint FK_ComponenteXProducto Foreign key ([IdComponente]) References [dbo].[Componentes]([IdComponente])
+)
+Go
+
 /******************************PRIMARY KEY*******************/
 --------------------------------------------------------------
 
