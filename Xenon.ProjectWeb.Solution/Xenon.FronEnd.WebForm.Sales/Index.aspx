@@ -30,7 +30,7 @@
 
     
     <!-- custom scrollbar stylesheet -->
-    <link href="Scripts/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
 
 </head>
 
@@ -161,6 +161,12 @@
         <div class="row">
             <div id="sidebar-left" class="col-xs-2 col-sm-2">
                 <ul class="nav main-menu" id="menu">
+                    <li>
+                        <a href="ProcesoPedido/frmPedido.aspx" class="active ajax-link">
+                            <i class="fa fa-dashboard"></i>
+                            <span class="hidden-xs">Dashboard</span>
+                        </a>
+                    </li>
                     <%--<li>
                         <a href="ScriptsDev/ajax/dashboard.html" class="active ajax-link">
                             <i class="fa fa-dashboard"></i>
@@ -337,7 +343,7 @@
                 <div class="preloader">
                     <img src="ScriptsDev/img/devoops_getdata.gif" class="devoops-getdata" alt="preloader" />
                 </div>
-                <div id="ajax-content" style="height:700px"></div>
+                <div id="ajax-content"></div>
             </div>
             <!--End Content-->
         </div>

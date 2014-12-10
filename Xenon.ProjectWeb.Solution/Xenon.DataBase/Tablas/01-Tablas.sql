@@ -282,6 +282,23 @@ Create Table [dbo].[ProductoXComponente](
 )
 Go
 
+
+Create Table [dbo].[ProductoXClasificacionTerapeutica](
+	[IdProducto] char(12) Not Null,
+	[IdClasTerapeutica] char(4) Not Null,
+	Constraint FK_Producto_CasificacionTera Foreign Key ([IdProducto]) references [dbo].[Productos]([IdProducto]),
+	Constraint FK_ClaseficacionTera_Producto Foreign Key ([IdClasTerapeutica]) References [dbo].[ClasificacionTerapeutica]([IdClasTerapeutica]) 
+)
+Go
+
+Create Table [dbo].[ProductoXPrincipiosActivos](
+	[IdProducto] char(12) Not Null,
+	[IdClasTerapeutica] char(4) Not null,
+	Constraint FK_Producto_PrincipiosActivos foreign key ([IdProducto])references [dbo].[Productos]([IdProducto]),
+	Constraint FK_PrincipiosActivos_Producto foreign key ([IdClasTerapeutica]) References [dbo].[ClasificacionTerapeutica]([IdClasTerapeutica])
+)
+Go
+
 /******************************PRIMARY KEY*******************/
 --------------------------------------------------------------
 
