@@ -3386,9 +3386,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 1;
   color: #555;
   text-align: center;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  background-color: #2B5797;
+  border: 1px solid #2B5797;
+  border-radius: 0px;
 }
 .input-group-addon.input-sm {
   padding: 5px 10px;

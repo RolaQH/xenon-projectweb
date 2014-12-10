@@ -54,7 +54,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 a.show-sidebar {
   float: left;
-  color:#fff;
+  color:#2B5797;
   outline: none;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -69,7 +69,7 @@ a.show-sidebar:hover {
   z-index: inherit;
   padding-bottom: 3000px !important;
   margin-bottom: -3000px !important;
-  background: none repeat scroll 0% 0% #0072C6;
+  background: none repeat scroll 0% 0% #2B5797;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
@@ -110,21 +110,21 @@ a.show-sidebar:hover {
 }
 .nav.main-menu > li > a:hover, .nav.main-menu > li > a:focus, .nav.main-menu > li.active > a, .nav.main-menu .open > a, .nav.main-menu .open > a:hover, .nav.main-menu .open > a:focus, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li.active > a,
 .nav.msg-menu > li > a:hover, .nav.msg-menu > li > a:focus, .nav.msg-menu > li.active > a, .nav.msg-menu .open > a, .nav.msg-menu .open > a:hover, .nav.msg-menu .open > a:focus {
-  background:none repeat scroll 0% 0% #2B5797;
+  background:none repeat scroll 0% 0% #2A2D33;
   color:#fff;
 }
 .nav.main-menu a.active, .nav.msg-menu a.active {
-  background:none repeat scroll 0% 0% #2B5797;
+  background:none repeat scroll 0% 0% #2A2D33;
 
 }
 .nav.main-menu a.active:hover, .nav.msg-menu a.active:hover {
-  background:none repeat scroll 0% 0% #2B5797;
+  background:none repeat scroll 0% 0% #2A2D33;
 }
 .nav.main-menu a.active-parent, .nav.msg-menu a.active-parent {
-  background: none repeat scroll 0% 0% #2B5797;
+  background: none repeat scroll 0% 0% #2A2D33;
 }
 .nav.main-menu a.active-parent:hover, .nav.msg-menu a.active-parent:hover {
-  background: none repeat scroll 0% 0% #2B5797;
+  background: none repeat scroll 0% 0% #2A2D33;
 }
 .nav.main-menu > li > a > i, .nav.msg-menu > li > a > i {
   font-size: 18px;
@@ -172,7 +172,7 @@ a.show-sidebar:hover {
 #top-panel {
   line-height: 50px;
   height: 50px;
-  background: none repeat scroll 0% 0% #0072C6;
+  background: none repeat scroll 0% 0% #2A2D33;
 }
 #main {
   margin-top: 50px;
@@ -185,8 +185,8 @@ a.show-sidebar:hover {
 }
 #search > input {
   width: 80%;
-  background: none repeat scroll 0% 0% #2B5797;
-  border: 1px solid #fff;
+  background: none repeat scroll 0% 0% #2A2D33;
+  border: 1px solid #2B5797;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -336,12 +336,12 @@ a.show-sidebar:hover {
   /*-webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;*/
-  color: white;
+  color: #333;
   font-size: 16px;
   position:relative;
   overflow: hidden;
-  background: #2B5797;
-  border-bottom: 1px solid #2B5797;
+  background: #fff;
+  border-bottom: 0px solid #fff;
   height: 34px;
 }
 .box-name, .modal-header-name {
@@ -400,7 +400,7 @@ a.show-sidebar:hover {
   display: block;
   float: left;
   text-align: center;
-  color: #FFF !important;
+  color: #333 !important;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
@@ -1571,21 +1571,25 @@ td.beauty-hover {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  color:#fff;
 }
 .ui-accordion .ui-accordion-icons {
   padding-left:28px;
 }
 .ui-accordion-header.ui-state-default {
-  background: #f5f5f5 !important;
+  background: #363940 !important;
   border: 1px solid #fcfcfc;
   border-left: 0;
   border-right: 0;
 }
 .ui-accordion-header.ui-state-hover, .ui-accordion-header.ui-state-focus {
-  background: #ebebeb !important;
+  background: #FFF !important;
+  color:#333;
 }
 .ui-accordion-header.ui-state-active {
-  background: #d8d8d8 !important;
+  background: #fff !important;
+  color: #333;
+    border: 1px solid #2B5797;
 }
 .ui-accordion .ui-accordion-content {
   padding:10px 12px;
@@ -1607,10 +1611,10 @@ td.beauty-hover {
 #simple_gallery a.fancybox img {
   width: 100%;
   padding: 2px;
-  border: 1px solid #979797;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  border: 1px solid #10C4B2;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
 }
 #simple_gallery a.fancybox img:hover {
   box-shadow: 0 0 10px #C7C7C7;
