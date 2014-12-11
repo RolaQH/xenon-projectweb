@@ -1,15 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmPedido.aspx.cs" Inherits="Xenon.FronEnd.WebForm.Sales.ProcesoPedido.frmPedido" %>
-<link href="Scripts/Kendo%20UI%20Web%20Q1%202014/styles/kendo.common.min.css" rel="stylesheet" />
-<link href="Scripts/Kendo%20UI%20Web%20Q1%202014/styles/kendo.default.min.css" rel="stylesheet" />
-<link href="Scripts/Kendo%20UI%20Web%20Q1%202014/styles/kendo.rtl.min.css" rel="stylesheet" />
-<link href="Scripts/Kendo%20UI%20Web%20Q1%202014/styles/kendo.metro.min.css" rel="stylesheet" />
- <link href="Scripts/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css" rel="stylesheet" />
- <script src="Scripts/Kendo%20UI%20Web%20Q1%202014/js/kendo.web.min.js"></script>
-<script src="Scripts/Kendo%20UI%20Web%20Q1%202014/examples/content/shared/js/console.js"></script>
 
-<script src="Scripts/DataTables-1.10.4/extensions/Responsive/js/dataTables.responsive.js"></script>
-<link href="Scripts/DataTables-1.10.4/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet" />
-<link href="ProcesoPedido/estilosTable.css" rel="stylesheet" />
 
 <style>
     #grilla {
@@ -18,6 +8,8 @@
         table {
             width: 100% !Important;
         }
+
+
 </style>
 <div class="row">
 	<div id="breadcrumb" class="col-md-12">
@@ -52,7 +44,15 @@
                         <div class="col-sm-6"  >
                             <div class="input-group">
                               <input type="text" class="form-control" placeholder="Buscar Producto" id="txtBuscar" style="border:1px solid #2B5797;">
-                              <span class="input-group-addon" style="color:#fff;"><i class="fa fa-search-plus"></i></span>
+                              <div class="input-group-btn">
+                                <button style="height:34px; color:#333;border:1px solid #2B5797;background-color:#fff;" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action <span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                  <li><a href="#">Clseficacion Terapeutica</a></li>
+                                  <li><a href="#">Cuadro Clinico</a></li>
+                                  <li><a id="btnPrin">Prinicipios Activos</a></li>
+                                  <li><a href="#">Sintomas</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
                             </div>
                         </div>
             </div>
@@ -100,187 +100,39 @@
             </div>
             </div>
             
-            <div class="box-content no-padding table-responsive" id="contendido">
-                <!--Grid Telerik -->
-
-                 <div id="example" class="k-content">
-            <div id="grid"></div>
-
-            <script type="text/x-kendo-template" id="template">
-                <div class="tabstrip">
-                    <ul>
-                        <li class="k-state-active">
-                           Orders
-                        </li>
-                        <li>
-                            neworders
-                        </li>
-                        <li>
-                            Contact Information
-                        </li>
-                    </ul>
-                    <div>
-                        <div class="orders"></div>
-                        
-                    </div>
-                    <div>
-                        <div class="neworders"></div>
-                    </div>
-                    <div>
-                        <div class='employee-details'>
-                            <ul>
-                                <li><label>Country:</label>#= Country #</li>
-                                <li><label>City:</label>#= City #</li>
-                                <li><label>Address:</label>#= Address #</li>
-                                <li><label>Home Phone:</label>#= HomePhone #</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="box-content no-padding table-responsive" id="contendido">
+                    <table style="width:100%;" class="table table-bordered table-striped table-hover table-heading table-datatable" id="grillaProduct">
+					<thead>
+						<tr>
+						    <th style="border:0px;" class="center">Codigo</th>
+							<th style="border:0px;" class="center">Descripcion</th>
+							<th style="border:0px;" class="center">Producto</th>
+                            <th style="border:0px;" class="center">Cantidad</th>
+                            <th style="border:0px;" class="center">SubTotal</th>
+                            <th style="border:0px;" class="center">Total</th>
+                            <th style="border:0px;" class="center">SubTotal</th>
+                            <th style="border:0px;" class="center">Total</th>
+						</tr>
+					</thead>
+					<tbody id="xx">
+					</tbody>
+					<tfoot style="background:#fff;border:0px;color:#333;text-align:center;vertical-align:middle;">
+						<tr>
+                            <th style="border:0px;" class="center" colspan="3"></th>
+                            <th style="border:0px;" class="center">Can.Total: <span style="font-size:15px;">0.5</span></th>
+                            <th style="border:0px;" class="center">Sum: 11</th>
+                            <th style="border:0px;" class="center">Total: 5.5</th>
+						</tr>
+					</tfoot>
+				</table>
                 </div>
-
-            </script>
-
-            <script>
-                $(document).ready(function () {
-                    var element = $("#grid").kendoGrid({
-                        dataSource: {
-                            type: "odata",
-                            transport: {
-                                read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Employees"
-                            },
-                            pageSize: 5,
-                            serverPaging: true,
-                            serverSorting: true
-                        },
-                        selectable: "multiple",
-                        scrollable: true,
-                        height: 300,
-                        sortable: true,
-                        pageable: true,
-                        
-                        detailInit: detailInit,
-                        dataBound: function () {
-                            this.expandRow(this.tbody.find("tr.k-master-row").first());
-                        },
-                        detailTemplate: kendo.template($("#template").html()),
-                        columns: [
-                            {
-                                field: "FirstName",
-                                title: "First Name",
-                                width: "120px"
-                            },
-                            {
-                                field: "LastName",
-                                title: "Last Name",
-                                width: "120px"
-                            },
-                            {
-                                field: "Country",
-                                width: "120px"
-                            },
-                            {
-                                field: "City",
-                                width: "120px"
-                            },
-                            {
-                                field: "Title",
-                                width: "120px"
-                            }
-                        ]
-                    });
-                });
-
-                function detailInit(e) {
-                    var detailRow = e.detailRow;
-
-                    detailRow.find(".tabstrip").kendoTabStrip({
-                        animation: {
-                            open: { effects: "fadeIn" }
-                        }
-                    });
-
-                    detailRow.find(".orders").kendoGrid({
-                        dataSource: {
-                            type: "odata",
-                            transport: {
-                                read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders"
-                            },
-                            serverPaging: true,
-                            serverSorting: true,
-                            serverFiltering: true,
-                            pageSize: 5,
-                            filter: { field: "EmployeeID", operator: "eq", value: e.data.EmployeeID }
-                        },
-                        scrollable: false,
-                        sortable: true,
-                        pageable: true,
-                        columns: [
-                            { field: "OrderID", title: "ID", width: "56px" },
-                            { field: "ShipCountry", title: "Ship Country", width: "110px" },
-                            { field: "ShipAddress", title: "Ship Address" },
-                            { field: "ShipName", title: "Ship Name", width: "190px" }
-                        ]
-                    });
-
-                    detailRow.find(".neworders").kendoGrid({
-                        dataSource: {
-                            type: "odata",
-                            transport: {
-                                read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders"
-                            },
-                            serverPaging: true,
-                            serverSorting: true,
-                            serverFiltering: true,
-                            pageSize: 5,
-                            filter: { field: "EmployeeID", operator: "eq", value: e.data.EmployeeID }
-                        },
-                        scrollable: false,
-                        sortable: true,
-                        pageable: true,
-                        columns: [
-                            { field: "OrderID", title: "ID", width: "56px" },
-                            { field: "ShipCountry", title: "Ship Country", width: "110px" },
-                            { field: "ShipAddress", title: "Ship Address" },
-                            { field: "ShipName", title: "Ship Name", width: "190px" }
-                        ]
-                    });
-                }
-            </script>
-            <style scoped>
-                .k-detail-cell .k-tabstrip .k-content {
-                    padding: 0.2em;
-                }
-                .employee-details ul
-                {
-                    list-style:none;
-                    font-style:italic;
-                    margin: 15px;
-                    padding: 0;
-                }
-                .employee-details ul li
-                {
-                    margin: 0;
-                    line-height: 1.7em;
-                }
-
-                .employee-details label
-                {
-                    display:inline-block;
-                    width:90px;
-                    padding-right: 10px;
-                    text-align: right;
-                    font-style:normal;
-                    font-weight:bold;
-                }
-            </style>
-        </div>
-                <!-- Cierre Grid-->
-
-            </div>
             
 			</div>
+
 		</div>
 
+
+      
     <div class="col-xs-12 col-sm-6">
 		<div class="box" id="boxs">
 			<div class="box-header">
@@ -297,7 +149,7 @@
 				</div>
 				<div class="no-move"></div>
 			</div>
-
+             
             <h3 style="text-align:right;margin:5px;margin-right:20px;">
                 Total: S/. 11.5
             </h3>
@@ -313,7 +165,7 @@
                             <th style="border:0px;" class="center">Total</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody >
 					</tbody>
 					<tfoot style="background:#fff;border:0px;color:#333;text-align:center;vertical-align:middle;">
 						<tr>
@@ -327,14 +179,16 @@
 			</div>
                 <button type="button" style="height:35px;text-align:center;vertical-align:middle;background:#D9534F;" class="btn btn-primary btnEli" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash-o"></i> Imprimir</button>
             <button type="button" style="height:35px;text-align:center;vertical-align:middle; background:#D9534F;" class="btn btn-primary btnEli" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash-o"></i> Generar Pedido</button>
-			</div>
+			
+        
+        </div>
 		</div>
-
 
 	</div>
 
-<%--<link href="Scripts/Telerik%20Style/styles/examples-offline.css" rel="stylesheet" />--%>
 
+<%--<link href="Scripts/Telerik%20Style/styles/examples-offline.css" rel="stylesheet" />--%>
+<script src="Paginas/Mantenimientos/Utilil.js"></script>
 
 <script>
     var content;
@@ -418,6 +272,13 @@ function listar() {
                 { "mDataProp": "cantidad", "sClass": "center", "bSortable": false },
                 { "mDataProp": "total", "sClass": "center", "bSortable": false }
         ],
+        "aaSorting": [[0, "asc"]],
+        "sDom": "<'box-content'<'col-sm-6'f><'col-sm-6 text-right'l><'clearfix'>>rt<'box-content'<'col-sm-6'i><'col-sm-6 text-right'p><'clearfix'>>",
+        "sPaginationType": "bootstrap",
+        "oLanguage": {
+            "sSearch": "",
+            "sLengthMenu": '_MENU_'
+        },
         "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
             //var cod = JSON.stringify(aData.IdEstadoCivil);
             //$('td button:eq(0)', nRow).data("codigo", cod);
@@ -430,12 +291,50 @@ function listar() {
     $("#grilla_filter").css("margin", "10px");
     $('.dataTables_paginate').css("float", "right");
 }
+
+function ListarProducto(Dato) {
+    DatosAjax('POST', 'ProcesoPedido/frmPedido.aspx/BuscarProductoCallBack', Dato, function (data) {
+        var oTable = $('#grillaProduct').dataTable({
+            "aaData": data.d,
+            "bFilter": false,
+            "bPaginate": true,
+            "aoColumns": [
+                    { "mDataProp": "IdProducto", "bSortable": false },
+                    { "mDataProp": "Producto", "sClass": "center", "bSortable": false },
+                    { "mDataProp": "Descripcion", "sClass": "center", "bSortable": false },
+                    { "mDataProp": "LaboratorioMarca", "sClass": "center", "bSortable": false },
+                    { "mDataProp": "TipoFarmaceutico", "sClass": "center", "bSortable": false },
+                    { "mDataProp": "PrecioVentaUnidad", "sClass": "center", "bSortable": false },
+                    { "mDataProp": "PrecioVenta", "sClass": "center", "bSortable": false },
+                    { "mDataProp": "Cantidad", "sClass": "center", "bSortable": false }
+
+            ],
+            "aaSorting": [[0, "asc"]],
+            "sDom": "<'box-content'<'col-sm-6'f><'col-sm-6 text-right'l><'clearfix'>>rt<'box-content'<'col-sm-6'i><'col-sm-6 text-right'p><'clearfix'>>",
+            "sPaginationType": "bootstrap",
+            "oLanguage": {
+                "sSearch": "",
+                "sLengthMenu": '_MENU_'
+            },
+            "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                //var cod = JSON.stringify(aData.IdEstadoCivil);
+                //$('td button:eq(0)', nRow).data("codigo", cod);
+                //$('td button:eq(1)', nRow).data("codigo", cod);
+            },
+            "bDestroy": true
+
+        });
+    });
+}
 $(document).ready(function () {
 
     init();
-
     LoadDataTablesScripts(listar);
-    
+    ListarProducto(" ");
+    $('#xx').on('click', 'tr', function () {
+        alert($(this).find("td:eq(0)").text());
+    });
+
 	// Load Fancybox2 and make gallery in callback
     LoadFancyboxScript(DemoGallery);
     WinMove();
@@ -456,5 +355,14 @@ $(document).ready(function () {
     $("#accordion div").css("height", "145px");
 
     
+});
+
+
+$('#txtBuscar').on('keydown', function (e) {
+    // Solo nos importa si la tecla presionada fue ENTER... (Para ver el código de otras teclas: http://www.webonweboff.com/tips/js/event_key_codes.aspx)
+    if (e.keyCode === 13) {
+        // Obtenemos el número del tabindex del campo actual
+        ListarProducto($("#txtBuscar").val());
+    }
 });
 </script>

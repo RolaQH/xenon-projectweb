@@ -49,6 +49,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Componentes.cs" />
     <Compile Include="CuadroClinico.cs" />
+    <Compile Include="DTO\BuscarProductoVentaResponse.cs" />
     <Compile Include="DTO\Item.cs" />
     <Compile Include="EstadoCivil.cs" />
     <Compile Include="EstadoFarmaco.cs" />

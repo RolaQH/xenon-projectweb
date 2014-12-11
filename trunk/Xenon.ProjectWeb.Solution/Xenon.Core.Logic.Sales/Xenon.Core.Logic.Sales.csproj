@@ -53,6 +53,7 @@
     <Compile Include="EstadoFarmacoLogic.cs" />
     <Compile Include="FarmacosLogic.cs" />
     <Compile Include="MenuLogic.cs" />
+    <Compile Include="ProductosLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorLogic.cs" />
     <Compile Include="SeccionLogic.cs" />

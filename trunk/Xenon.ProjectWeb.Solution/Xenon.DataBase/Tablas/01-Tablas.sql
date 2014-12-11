@@ -293,9 +293,9 @@ Go
 
 Create Table [dbo].[ProductoXPrincipiosActivos](
 	[IdProducto] char(12) Not Null,
-	[IdClasTerapeutica] char(4) Not null,
+	[IdPrincipioActivo] char(4) Not null,
 	Constraint FK_Producto_PrincipiosActivos foreign key ([IdProducto])references [dbo].[Productos]([IdProducto]),
-	Constraint FK_PrincipiosActivos_Producto foreign key ([IdClasTerapeutica]) References [dbo].[ClasificacionTerapeutica]([IdClasTerapeutica])
+	Constraint FK_PrincipiosActivos_Producto foreign key ([IdPrincipioActivo]) references [dbo].[PrincipiosActivos] ([IdPrincipioActivo])
 )
 Go
 
