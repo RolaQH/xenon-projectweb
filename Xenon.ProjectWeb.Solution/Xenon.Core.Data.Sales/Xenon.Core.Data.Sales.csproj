@@ -76,9 +76,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BoticServiceModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Modelo\Seccion.cs">
-      <DependentUpon>BoticServiceModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="ProductosAccessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorAccessor.cs" />
     <Compile Include="SeccionAccessor.cs" />

@@ -25,6 +25,5 @@ namespace Xenon.Core.Data.Sales.Modelo
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Seccion> Seccion { get; set; }
     }
 }

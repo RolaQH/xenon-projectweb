@@ -4,48 +4,23 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="BDBoticServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityType Name="Seccion">
-          <Key>
-            <PropertyRef Name="IdSeccion" />
-          </Key>
-          <Property Name="IdSeccion" Type="char" MaxLength="3" Nullable="false" />
-          <Property Name="Seccion" Type="varchar" MaxLength="50" />
-          <Property Name="Estado" Type="bit" />
-        </EntityType>
+    <Schema Namespace="BDBoticServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDBoticService.dbo.lista' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityContainer Name="BDBoticServiceModelStoreContainer">
-          <EntitySet Name="Seccion" EntityType="Self.Seccion" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BDBoticServiceModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="BDBoticServiceEntities" annotation:LazyLoadingEnabled="true" >
-          <EntitySet Name="Seccion" EntityType="BDBoticServiceModel.Seccion" />
         </EntityContainer>
-        <EntityType Name="Seccion">
-          <Key>
-            <PropertyRef Name="IdSeccion" />
-          </Key>
-          <Property Name="IdSeccion" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
-          <Property Name="Seccion1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Estado" Type="Boolean" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BDBoticServiceModelStoreContainer" CdmEntityContainer="BDBoticServiceEntities" >
-          <EntitySetMapping Name="Seccion">
-            <EntityTypeMapping TypeName="BDBoticServiceModel.Seccion">
-              <MappingFragment StoreEntitySet="Seccion">
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-                <ScalarProperty Name="Seccion1" ColumnName="Seccion" />
-                <ScalarProperty Name="IdSeccion" ColumnName="IdSeccion" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
