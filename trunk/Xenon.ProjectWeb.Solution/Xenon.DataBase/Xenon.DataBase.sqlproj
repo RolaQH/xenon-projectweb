@@ -67,6 +67,7 @@
     <None Include="Stored Procedure\01- Login.sql" />
     <None Include="Pruebas\Prueba de Login.sql" />
     <None Include="Bak\BoticService.bak" />
+    <None Include="Bak\bd.bak" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Pruebas\Sintomas Registros.sql" />
